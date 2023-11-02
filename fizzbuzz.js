@@ -1,4 +1,28 @@
-// VERSION SIMPLE SANS FONCTION
+// VERSION AVEC FONCTION
+// Se lance avec node
+
+var loop = () => { //création d'un fonction anonyme dans une variable loop
+    let count=0; // Initialisation du compteur à 0
+    while (count<100){ // La boucle se lance jusqu'à count=100
+        count++; // On incrémente de 1 à chaque itération de la boucle while
+        if (((count%3) === 0 && count%5) ===0){ // On vérifie que le chiffre count est divisible par 3 ET 5. À vérifier avant 3 et 5 seuls sinon ils sont prioritaires.
+            console.log('FizzBuzz') 
+        }
+        else if ((count % 3) === 0){ // Vérifie si count est divisible par 3
+            console.log('Fizz');
+        }
+        else if ((count % 5) === 0){ // Vérifie si count est divisible par 5
+            console.log('Buzz');
+        }
+        else {
+            console.log(count); // écrit la valeur de count si elle ne correspond à aucune des autres conditions.
+        }
+    }
+};
+loop(); // On appelle la fonction
+
+
+/* // VERSION SIMPLE SANS FONCTION
 // Se lance avec node
 
 // Création du compteur (variable)
@@ -19,7 +43,7 @@ while (count<100){ // La boucle se lance jusqu'à count=100
     else {
             console.log(count); // écrit la valeur de count si elle ne correspond à aucune des autres conditions.
     }
-}
+} */
 
 /* 
 //Premier essai, ne fonctionne pas car pb avec le modulo
